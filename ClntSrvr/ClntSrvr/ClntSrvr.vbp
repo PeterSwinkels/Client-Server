@@ -1,6 +1,6 @@
 Type=Exe
 Object={248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0; MSWINSCK.OCX
-Form=ClntSrvr.frm
+Form=Interface.frm
 Module=CoreModule; Core.bas
 IconForm="InterfaceWindow"
 Startup="Sub Main"
