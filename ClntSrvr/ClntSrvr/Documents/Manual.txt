@@ -1,0 +1,24 @@
+Manual for Client/Server v1.10 - by: Peter Swinkels. ***2022***
+
+This program can act as either a raw TCP client or server. A few ways to test this program are connecting it to a TELNET server or to connect it to itself. The latter can be the same instance of the program or another. Ensure no firewalls are blocking the program's access to the network.
+
+To connect to a TELNET server:
+1. Press Shift + F1 to ensure the program is in client mode.
+2. Press F3 to specify a remote server (hostname or ip) and port.
+3. Press F2 to connect.
+
+To connect the program to itself:
+Server:
+1. Press Shift + F2 to ensure the program is in server mode.
+2. Press F6 to specify a local hostname/ip and port.
+3. Press F5 to start listening for connection.
+Client:
+1. Press Shift + F1 to ensure the program is in client mode.
+2. Press F3 to specify the server's hostname/ip and port.
+3. Press F2 to connect.
+
+Notes:
+-All commands mentioned can also be accessed via the pulldown menus.
+-The remote line break option is used to define the type of line breaks used by the server. These will be converted to the line breaks used locally.
+-The data suffix option specifies what bytes to add to date being sent. This is especially useful for sending a specific type of line breaks. 
+-All hexadecimal numbers in an escape character sequence must be padded with zeroes to make them two digits long.
