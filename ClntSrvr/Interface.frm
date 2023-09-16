@@ -659,7 +659,7 @@ On Error GoTo ErrorTrap
    DataOutBox.ToolTipText = "Specify a character code using the foreward slash escape character (""/"") followed by a two digit hexadecimal value. Two escape characters are interpreted as a single foreward slash."
    If Not Echo() Then Echo Toggle:=True
    Mode NewMode:=ClientMode
-   RemoteLineBreak NewRemoteLineBreak:=Empty, SetRemoteLineBreak:=True
+   RemoteLineBreak NewRemoteLineBreak:=vbNullString, SetRemoteLineBreak:=True
    Suffix NewSuffix:="/0D/0A", SetSuffix:=True
    
    DoAction ClientDisplayInformation
