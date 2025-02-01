@@ -209,8 +209,6 @@ Attribute VB_Exposed = False
 'This module contains this program's interface window.
 Option Explicit
 
-
-
 'This procedure gives the client/monitor/server the command to perform the specified action.
 Private Sub DoAction(Action As ActionsE, Optional ByVal DataOut As String, Optional BytesReceived As Long = 0, Optional Request As Long = 0)
 On Error GoTo ErrorTrap
@@ -324,7 +322,7 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
+'This procedure attempts to send the specified data using either the client or server after unescaping it.
 Private Sub DoSendData(DataOut As String, Sender As Winsock, OutputBox As TextBox)
 On Error GoTo ErrorTrap
 Dim ErrorAt As Long
@@ -387,7 +385,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Function
-
 
 'This procedure handles any client/monitor/server action errors that occur.
 Private Sub HandleActionError()
@@ -455,6 +452,7 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Function
+
 'This procedure sends the specified user input.
 Private Sub SendData(Optional ByVal DataOut As String = vbNullString, Optional Repeat As Boolean = False)
 On Error GoTo ErrorTrap
@@ -479,7 +477,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Sub
-
 
 'This procedure clears the display.
 Private Sub ClearMenu_Click()
@@ -510,7 +507,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Sub
-
 
 'This procedure gives the client the command to connect with a server.
 Private Sub ClientConnectMenu_Click()
@@ -560,9 +556,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Sub
-
-
-
 
 'This procedure informs the user when the client has made a connection.
 Private Sub Client_Connect()
@@ -648,8 +641,6 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
-
 'This procedure initializes this window.
 Private Sub Form_Load()
 On Error GoTo ErrorTrap
@@ -732,7 +723,6 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
 'This procedure gives the monitor the command to start listening for connection requests.
 Private Sub MonitorListenMenu_Click()
 On Error GoTo ErrorTrap
@@ -769,7 +759,6 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
 'This procedure informs the user when the monitor has encountered an error.
 Private Sub Monitor_Error(ByVal Number As Integer, Description As String, ByVal Scode As Long, ByVal Source As String, ByVal HelpFile As String, ByVal HelpContext As Long, CancelDisplay As Boolean)
 On Error GoTo ErrorTrap
@@ -782,7 +771,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Sub
-
 
 'This procedure closes this window.
 Private Sub QuitMenu_Click()
@@ -842,7 +830,6 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
 'This procedure gives the server the command to close any active connections.
 Private Sub ServerCloseMenu_Click()
 On Error GoTo ErrorTrap
@@ -855,7 +842,6 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
 'This procedure gives the command to activate the client mode.
 Private Sub ServerModeMenu_Click()
 On Error GoTo ErrorTrap
@@ -867,7 +853,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Sub
-
 
 'This procedure informs the user when the server's connection has been closed.
 Private Sub Server_Close()

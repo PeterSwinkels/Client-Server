@@ -26,6 +26,7 @@ Public Enum ModesE
    ClientMode                     'Indicates client mode.
    ServerMode                     'Indicates server mode.
 End Enum
+
 'This procedure updates the specified output display with the specified text.
 Public Sub Display(OutputBox As TextBox, ByVal NewText As String)
 On Error GoTo ErrorTrap
@@ -60,7 +61,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Sub
-
 
 'This procedure converts non-displayable characters in the specified text to escape sequences and returns the result.
 Public Function Escape(Text As String, Optional EscapeCharacter As String = "/", Optional EscapeLineBreaks As Boolean = False) As String
@@ -98,7 +98,6 @@ ErrorTrap:
    Resume EndRoutine
 End Function
 
-
 'This procedure checks whether the specified escape sequence procedure value indicates an error and return this value.
 Public Function EscapeSequenceError(ErrorAt As Long) As Boolean
 On Error GoTo ErrorTrap
@@ -115,8 +114,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Function
-
-
 
 'This procedure handles any errors that occur.
 Public Sub HandleError()
@@ -153,7 +150,6 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
 'This procedure returns this program's information.
 Public Function ProgramInformation() As String
 On Error GoTo ErrorTrap
@@ -171,7 +167,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Function
-
 
 'This procedure manages and returns the line break character(s) used by the remote client/server.
 Public Function RemoteLineBreak(Optional NewRemoteLineBreak As String = vbNullString, Optional SetRemoteLineBreak As Boolean = False) As String
@@ -212,8 +207,6 @@ ErrorTrap:
    Resume EndRoutine
 End Sub
 
-
-
 'This procedure returns the description for the specified state.
 Public Function StateDescription(State As Long) As String
 On Error GoTo ErrorTrap
@@ -230,7 +223,6 @@ ErrorTrap:
    Resume EndRoutine
 End Function
 
-
 'This procedure manages and returns the suffix for data sent by the user.
 Public Function Suffix(Optional NewSuffix As String = vbNullString, Optional SetSuffix As Boolean = False) As String
 On Error GoTo ErrorTrap
@@ -246,7 +238,6 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Function
-
 
 'This procedure converts any escape sequences in the specified text to characters and returns the result.
 Public Function Unescape(Text As String, Optional EscapeCharacter As String = "/", Optional ErrorAt As Long = 0) As String
@@ -299,5 +290,4 @@ ErrorTrap:
    HandleError
    Resume EndRoutine
 End Function
-
 
